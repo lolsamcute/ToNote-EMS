@@ -27,8 +27,11 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'email',
         'role',
         'department',
-        'emp_age',
-        'is_verified'
+        'age',
+        'address',
+        'is_verified',
+        'image',
+        'leave_status'
 
 
     ];
@@ -41,4 +44,15 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+
+    public function reports()
+	{
+		return $this->hasMany('App\Models\Report', 'pass_id');
+	}
+
+    public function salaries()
+	{
+		return $this->hasMany('App\Models\Salary', 'pass_id');
+	}
 }

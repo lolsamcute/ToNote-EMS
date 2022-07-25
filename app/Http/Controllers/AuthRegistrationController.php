@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use Storage;
 
+
 class AuthRegistrationController extends Controller
 {
 
@@ -37,7 +38,7 @@ class AuthRegistrationController extends Controller
 
              if(is_null($user))
                 {
-
+ 
                    $userIDGen = mt_rand(100000000, 999999999);
                    $currentTime = Carbon::now()->addDay();
 
@@ -47,6 +48,8 @@ class AuthRegistrationController extends Controller
                             'last_name' => $request->last_name,
                             'email' => $request->email,
                             'department' => $request->department,
+                            'address' => $request->address,
+                            'age' => $request->age,
                             'role' => "employee",
                         ]);
 
@@ -98,7 +101,6 @@ class AuthRegistrationController extends Controller
                             'first_name' => $request->first_name,
                             'last_name' => $request->last_name,
                             'email' => $request->email,
-                            'department' => $request->department,
                             'role' => "admin",
                         ]);
 
@@ -116,6 +118,8 @@ class AuthRegistrationController extends Controller
 
     }
 
+
+   
 
 
 

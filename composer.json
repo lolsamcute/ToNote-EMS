@@ -6,8 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=7.1.3",
-        "laravel/lumen-framework": "5.8.*",
-        "dusterio/lumen-passport": "^0.3.4"
+        "dusterio/lumen-passport": "^0.3.4",
+        "intervention/image": "^2.7",
+        "laravel/lumen-framework": "5.8.*"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
