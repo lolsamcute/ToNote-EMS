@@ -1,3 +1,21 @@
+
+# Spring Report
+
+- Employee & Admin Authentication Integrated
+- Get Employee Salary 
+- Get Employee reports for Salary, Training & Leave
+
+
+# How to start project
+- Download the project
+- Composer update 
+- Start Lumen using "php -S localhost:8000 -t public"
+- Migrate your Database using "php artisan migrate"
+
+
+
+
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
