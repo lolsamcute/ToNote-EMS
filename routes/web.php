@@ -45,6 +45,8 @@ $router->group(['prefix' => 'ems/api'], function () use ($router) {
         $router->post('deleteAllEmployee/{id}', 'EmployeeController@deleteAllEmployee'); // Delete Employee
         $router->post('assign/leave', 'EmployeeController@assignLeave'); // Assign Leave to Employee
         $router->post('grant/emp-leave/{id}', 'EmployeeController@grantLeave'); // Grant Leave to Employee
+
+        $router->get('getEmployeeReports/{id}', 'EmployeeController@getEmployeeReports'); // Get Employee Reports
     });
 
 

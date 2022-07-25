@@ -105,6 +105,29 @@ class EmployeeController extends Controller
     }
 
 
+    public function getEmployeeReports(Request $request, $id)
+    {
+        try {
+
+            $sa = Salary::find($id);
+            $le = Leave::find($id);
+            $train = Training::find($id);
+            $users = User::where('role', 'employee')
+                            ->where('pass_id', $sa)
+                            ->where('pass_id', $le)
+                            ->where('pass_id', $train)
+                            ->get();
+
+        }catch (\Exception $exception)
+        {
+            return response()->json(['error' => true, 'message' => $exception->getMessage()], 500);
+        }
+        return response()->json(['error' => false, 'message' => 'View  Employee with Salary', 'data' => $users], 200);
+
+
+    }
+
+
     
 
     
